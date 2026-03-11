@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 from groq import Groq
 
 
@@ -20,9 +21,8 @@ st.write(
 # OpenAI Client
 # -----------------------------
 client = Groq(
-    api_key=st.secrets["GROQ_API_KEY"]
+    api_key=os.environ["GROQ_API_KEY"]
 )
-
 # -----------------------------
 # File Upload
 # -----------------------------
